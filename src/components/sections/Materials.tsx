@@ -3,12 +3,12 @@
 import { motion } from "motion/react";
 
 const specs = [
-  ["Shell", "Anodized aluminum · sandblasted"],
-  ["Halo", "Warm copper alloy · micro-beveled"],
-  ["Core", "Adaptive emitter · tunable warmth"],
-  ["Height", "168 mm"],
-  ["Weight", "1.1 kg"],
-  ["Power", "USB‑C · wireless standby"],
+  ["Bandwidth", "38 Hz – 20 kHz (±2.5 dB, free field)"],
+  ["Drivers", "12 × 40 mm full-range + 1 × 100 mm woofer"],
+  ["DSP", "48 kHz · 32-bit float · <8 ms round-trip"],
+  ["Calibration", "Room IR capture · ~70 seconds"],
+  ["Max SPL", "98 dB @ 1 m (THD < 1%)"],
+  ["Power", "65 W peak · USB‑C PD standby"],
 ];
 
 export function Materials() {
@@ -25,14 +25,15 @@ export function Materials() {
           transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
         >
           <p className="text-xs font-semibold tracking-[0.24em] text-copper">
-            CRAFT
+            SPECIFICATIONS
           </p>
           <h2 className="display mt-4 max-w-lg text-4xl text-bone md:text-5xl">
-            Built like an instrument, not a gadget.
+            Numbers you can check, not adjectives.
           </h2>
           <p className="mt-6 max-w-md text-base leading-relaxed text-bone-muted">
-            Scroll again — the halo lifts, the core warms. Materials do the
-            storytelling so the page never needs floating badges.
+            Housing is stiff anodized aluminum to reduce cabinet resonance. The
+            copper ring is a heat and RF shield for the emitter array — form
+            follows thermal and electromagnetic constraints, not decoration.
           </p>
         </motion.div>
 
@@ -46,7 +47,7 @@ export function Materials() {
           {specs.map(([term, detail]) => (
             <div
               key={term}
-              className="grid grid-cols-[0.8fr_1.2fr] gap-4 border-b border-line px-5 py-4 last:border-b-0"
+              className="grid grid-cols-[0.85fr_1.15fr] gap-4 border-b border-line px-5 py-4 last:border-b-0"
             >
               <dt className="text-sm tracking-[0.12em] text-bone-muted">
                 {term}

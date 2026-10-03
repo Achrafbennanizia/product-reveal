@@ -16,13 +16,13 @@ export function Nav() {
         </a>
         <nav className="hidden items-center gap-8 text-sm text-bone-muted md:flex">
           <a href="#shift" className="transition-colors hover:text-bone">
-            Why
+            Science
           </a>
           <a href="#system" className="transition-colors hover:text-bone">
-            System
+            Method
           </a>
           <a href="#materials" className="transition-colors hover:text-bone">
-            Craft
+            Specs
           </a>
           <a href="#order" className="transition-colors hover:text-bone">
             Order

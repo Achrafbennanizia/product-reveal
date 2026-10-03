@@ -16,7 +16,7 @@ export function Hero() {
             transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1], delay: 0.2 }}
             className="mb-5 text-xs font-semibold tracking-[0.28em] text-copper"
           >
-            FIELD INSTRUMENTS · 01
+            FIELD INSTRUMENTS · SPATIAL AUDIO NODE
           </motion.p>
 
           <motion.h1
@@ -34,8 +34,9 @@ export function Hero() {
             transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1], delay: 0.42 }}
             className="mt-6 max-w-md text-base leading-relaxed text-bone-muted md:text-lg"
           >
-            Spatial audio, sculpted. A single node that opens the room —
-            without the stack of speakers that usually comes with it.
+            One loudspeaker that places sound in three dimensions — by measuring
+            your room first, then steering energy with timed beams instead of
+            drowning the walls in volume.
           </motion.p>
 
           <motion.div
@@ -45,13 +46,13 @@ export function Hero() {
             className="mt-9 flex flex-wrap items-center gap-4"
           >
             <a href="#order" className="btn-primary">
-              Reserve yours
+              Reserve a unit
             </a>
             <a
               href="#shift"
               className="inline-flex items-center justify-center rounded-full border border-line px-6 py-3 text-sm font-medium tracking-[0.08em] text-bone transition hover:border-bone/40"
             >
-              Scroll the reveal
+              How it works
             </a>
           </motion.div>
         </div>
@@ -63,7 +64,7 @@ export function Hero() {
           className="hidden justify-self-end text-right md:block"
         >
           <p className="text-xs tracking-[0.22em] text-bone-muted">
-            SCROLL TO ORBIT
+            SCROLL TO INSPECT
           </p>
           <div className="mt-3 ml-auto h-16 w-px bg-gradient-to-b from-copper to-transparent" />
         </motion.div>

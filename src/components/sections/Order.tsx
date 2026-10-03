@@ -14,15 +14,15 @@ export function Order() {
       >
         <div className="max-w-xl">
           <p className="text-xs font-semibold tracking-[0.24em] text-copper">
-            FOUNDERS EDITION
+            FOUNDERS BATCH · 200 UNITS
           </p>
           <h2 className="display mt-4 text-4xl text-bone md:text-6xl">
-            Reserve the first two hundred.
+            Get calibrated hardware, not a wishlist.
           </h2>
           <p className="mt-5 text-base leading-relaxed text-bone-muted">
-            $1,280 · ships Q4 · includes room calibration kit and a private
-            tuning session. This CTA is the conversion close after awareness,
-            desire, and proof — not a random button in the hero.
+            $1,280 · ships in Q4. Includes the measurement mic, a printed
+            calibration guide, and one remote tuning session so your room’s
+            impulse response is applied correctly on day one.
           </p>
         </div>
 
@@ -31,10 +31,10 @@ export function Order() {
             href="mailto:hello@fieldinstruments.studio?subject=AURALIS%20Founders%20Edition"
             className="btn-copper"
           >
-            Request invite
+            Request an invite
           </a>
           <p className="text-center text-xs tracking-[0.14em] text-bone-muted">
-            No spam · 48h response
+            Reply within 48 hours
           </p>
         </div>
       </motion.div>

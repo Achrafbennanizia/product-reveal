@@ -5,18 +5,18 @@ import { motion } from "motion/react";
 const beats = [
   {
     index: "01",
-    title: "Sense the room",
-    copy: "A quiet chirp reads walls and soft surfaces. No app maze — the node learns first, then plays.",
+    title: "Measure the room",
+    copy: "A short probe tone captures an impulse response. Soft furniture, glass, and corners are mapped so the DSP knows which reflections help — and which ones smear the image.",
   },
   {
     index: "02",
-    title: "Sculpt the field",
-    copy: "Twelve beamlets shape width and height. Voices stay centered; instruments bloom around you.",
+    title: "Steer with timed beams",
+    copy: "Twelve independently delayed drivers form constructive and destructive interference patterns. Energy is aimed toward listening zones instead of blasting every wall equally.",
   },
   {
     index: "03",
-    title: "Stay out of sight",
-    copy: "One object on a shelf. Copper halo, matte shell, no LED carnival — presence without spectacle.",
+    title: "Render spatial cues",
+    copy: "Object and ambisonic feeds are decoded with HRTF-informed filters so elevation and depth stay stable as you move a few steps — not only when you sit in one “sweet spot.”",
   },
 ];
 
@@ -32,13 +32,18 @@ export function System() {
           className="max-w-2xl"
         >
           <p className="text-xs font-semibold tracking-[0.24em] text-copper">
-            THE SYSTEM
+            THE METHOD
           </p>
           <h2 className="display mt-4 text-4xl text-bone md:text-6xl">
-            Three moves.
+            Three rules.
             <br />
-            One listening habit.
+            No magic black box.
           </h2>
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-bone-muted">
+            AURALIS follows a fixed pipeline: sense the acoustic boundary
+            conditions, form beams with phase control, then apply spatial
+            filters that match how hearing works — not louder EQ presets.
+          </p>
         </motion.div>
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">

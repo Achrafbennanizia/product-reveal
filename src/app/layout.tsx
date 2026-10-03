@@ -15,13 +15,13 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "AURALIS — Spatial audio, sculpted | Field Instruments",
+  title: "AURALIS — Room-calibrated spatial audio | Field Instruments",
   description:
-    "A cinematic product launch for AURALIS: a sculptural spatial audio node. Scroll to reveal the form, materials, and the case for listening in three dimensions.",
+    "AURALIS is a single-node spatial loudspeaker that measures your room, steers sound with timed beams, and renders height and distance cues based on how human hearing works.",
   openGraph: {
-    title: "AURALIS — Spatial audio, sculpted",
+    title: "AURALIS — Room-calibrated spatial audio",
     description:
-      "Portfolio launch landing: scroll-scrubbed 3D product reveal with a clear marketing funnel.",
+      "Sense the room. Steer with beams. Render spatial cues. A science-first product launch landing.",
     type: "website",
   },
 };
