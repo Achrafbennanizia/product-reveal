@@ -44,10 +44,7 @@ export function Hero() {
             transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1], delay: 0.55 }}
             className="mt-9 flex flex-wrap items-center gap-4"
           >
-            <a
-              href="#order"
-              className="inline-flex items-center justify-center rounded-full bg-bone px-6 py-3 text-sm font-semibold tracking-[0.08em] text-ink transition hover:bg-copper-bright"
-            >
+            <a href="#order" className="btn-primary">
               Reserve yours
             </a>
             <a

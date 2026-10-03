@@ -4,6 +4,9 @@ Cinematic **3D product launch landing** for a fictional spatial audio node. Buil
 
 **Live intent:** awareness → shift → desire → proof → conversion.
 
+**Repo:** [github.com/Achrafbennanizia/product-reveal](https://github.com/Achrafbennanizia/product-reveal)  
+**Live site (GitHub Pages):** [achrafbennanizia.github.io/product-reveal](https://achrafbennanizia.github.io/product-reveal/)
+
 ## Stack
 - Next.js (App Router) + TypeScript + Tailwind CSS v4
 - React Three Fiber + Drei (procedural product model)
@@ -26,8 +29,14 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ```bash
 npm run build
-npm start
+npx serve out
 ```
+
+## CI/CD
+- **CI** (`.github/workflows/ci.yml`) — lint + static build on every push/PR to `main`
+- **Deploy** (`.github/workflows/deploy.yml`) — publishes `out/` to GitHub Pages on `main`
+
+After the first push, enable Pages in the repo: **Settings → Pages → Source: GitHub Actions**.
 
 ## Structure
 - `src/components/canvas/` — Three.js product + lighting
@@ -39,7 +48,3 @@ npm start
 - Scroll progress drives rotation, lift, and halo explode
 - `prefers-reduced-motion` disables Lenis float / idle motion
 - Single primary conversion CTA after proof — not a noisy hero stack
-
-## Deploy
-Push to GitHub and connect to Vercel. Root directory: `product-reveal` if this lives in a monorepo.
-# product-reveal

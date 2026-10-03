@@ -29,7 +29,7 @@ export function Order() {
         <div className="flex w-full flex-col gap-3 md:w-auto md:min-w-[240px]">
           <a
             href="mailto:hello@fieldinstruments.studio?subject=AURALIS%20Founders%20Edition"
-            className="inline-flex items-center justify-center rounded-full bg-copper px-6 py-3.5 text-sm font-semibold tracking-[0.1em] text-ink transition hover:bg-copper-bright"
+            className="btn-copper"
           >
             Request invite
           </a>
