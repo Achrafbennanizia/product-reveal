@@ -1,12 +1,13 @@
 "use client";
 
 import { motion } from "motion/react";
+import { smoothScrollToId } from "@/lib/scroll-to";
 
 export function Hero() {
   return (
     <section
       id="top"
-      className="relative z-10 flex min-h-[100svh] items-end px-5 pb-16 pt-28 md:items-center md:px-8 md:pb-24"
+      className="section-panel relative z-10 flex items-end px-5 pt-28 pb-16 snap-start md:items-center md:px-8 md:pb-24"
     >
       <div className="mx-auto grid w-full max-w-7xl gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] md:items-end">
         <div className="max-w-xl">
@@ -45,11 +46,22 @@ export function Hero() {
             transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1], delay: 0.55 }}
             className="mt-9 flex flex-wrap items-center gap-4"
           >
-            <a href="#order" className="btn-primary">
+            <a
+              href="#order"
+              onClick={(e) => {
+                e.preventDefault();
+                smoothScrollToId("order", 2.15);
+              }}
+              className="btn-primary"
+            >
               Reserve a unit
             </a>
             <a
               href="#shift"
+              onClick={(e) => {
+                e.preventDefault();
+                smoothScrollToId("shift", 2.15);
+              }}
               className="inline-flex items-center justify-center rounded-full border border-line px-6 py-3 text-sm font-medium tracking-[0.08em] text-bone transition hover:border-bone/40"
             >
               How it works

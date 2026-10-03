@@ -33,6 +33,29 @@
 html {
   background: var(--ink);
   color: var(--bone);
+  scroll-snap-type: y proximity;
+  scroll-behavior: auto;
+}
+
+/* One viewport per page part — internal scroll if content overflows */
+.section-panel {
+  min-height: 100dvh;
+  max-height: 100dvh;
+  overflow-x: clip;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  -webkit-overflow-scrolling: touch;
+}
+
+.section-panel::-webkit-scrollbar {
+  width: 3px;
+}
+
+.section-panel::-webkit-scrollbar-thumb {
+  background: color-mix(in oklab, var(--copper) 50%, transparent);
+  border-radius: 999px;
 }
 
 html.lenis,
@@ -134,6 +157,10 @@ button {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-snap-type: none;
+  }
+
   *,
   *::before,
   *::after {

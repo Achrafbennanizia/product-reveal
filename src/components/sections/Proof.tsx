@@ -31,8 +31,11 @@ const findings = [
 
 export function Proof() {
   return (
-    <section className="relative z-10 px-5 py-24 md:px-8 md:py-28">
-      <div className="mx-auto max-w-7xl">
+    <section
+      id="proof"
+      className="section-panel relative z-10 px-5 py-14 md:px-8 md:py-16"
+    >
+      <div className="mx-auto flex h-full max-w-7xl flex-col justify-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -42,12 +45,12 @@ export function Proof() {
           <p className="text-xs font-semibold tracking-[0.24em] text-copper">
             LAB RESULTS
           </p>
-          <h2 className="display mt-4 max-w-2xl text-4xl text-bone md:text-5xl">
+          <h2 className="display mt-3 max-w-2xl text-3xl text-bone md:mt-4 md:text-5xl">
             What we measure before we claim it.
           </h2>
         </motion.div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <div className="mt-6 grid gap-4 md:mt-8 md:grid-cols-2 md:gap-5">
           {findings.map((item, i) => (
             <motion.article
               key={item.title}
@@ -59,15 +62,15 @@ export function Proof() {
                 ease: [0.23, 1, 0.32, 1],
                 delay: i * 0.06,
               }}
-              className="rounded-3xl border border-line bg-ink-elevated/60 p-8 backdrop-blur-xl"
+              className="rounded-3xl border border-line bg-ink-elevated/60 p-5 backdrop-blur-xl md:p-7"
             >
               <p className="text-xs tracking-[0.18em] text-bone-muted">
                 {item.title}
               </p>
-              <p className="display mt-3 text-4xl text-copper md:text-5xl">
+              <p className="display mt-2 text-3xl text-copper md:mt-3 md:text-4xl">
                 {item.metric}
               </p>
-              <p className="mt-4 text-sm leading-relaxed text-bone-muted">
+              <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-bone-muted md:mt-4 md:line-clamp-none">
                 {item.detail}
               </p>
             </motion.article>

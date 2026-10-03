@@ -1,5 +1,6 @@
 import { ProductCanvas } from "@/components/canvas/ProductCanvas";
 import { Nav } from "@/components/Nav";
+import { ScrollAssist } from "@/components/ScrollAssist";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { Footer } from "@/components/sections/Footer";
 import { Hero } from "@/components/sections/Hero";
@@ -18,6 +19,7 @@ export default function Home() {
         <div className="grain" aria-hidden />
         <ProductCanvas />
         <Nav />
+        <ScrollAssist />
         <main className="relative">
           <Hero />
           <Shift />

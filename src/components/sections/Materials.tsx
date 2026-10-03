@@ -15,9 +15,9 @@ export function Materials() {
   return (
     <section
       id="materials"
-      className="relative z-10 px-5 py-28 md:px-8 md:py-36"
+      className="section-panel relative z-10 px-5 py-14 md:px-8 md:py-16"
     >
-      <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-2 md:items-end">
+      <div className="mx-auto grid h-full max-w-7xl content-center gap-8 md:grid-cols-2 md:items-center md:gap-12">
         <motion.div
           initial={{ opacity: 0, y: 36 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -27,10 +27,10 @@ export function Materials() {
           <p className="text-xs font-semibold tracking-[0.24em] text-copper">
             SPECIFICATIONS
           </p>
-          <h2 className="display mt-4 max-w-lg text-4xl text-bone md:text-5xl">
+          <h2 className="display mt-3 max-w-lg text-3xl text-bone md:mt-4 md:text-5xl">
             Numbers you can check, not adjectives.
           </h2>
-          <p className="mt-6 max-w-md text-base leading-relaxed text-bone-muted">
+          <p className="mt-4 max-w-md text-sm leading-relaxed text-bone-muted md:mt-6 md:text-base">
             Housing is stiff anodized aluminum to reduce cabinet resonance. The
             copper ring is a heat and RF shield for the emitter array — form
             follows thermal and electromagnetic constraints, not decoration.
@@ -47,7 +47,7 @@ export function Materials() {
           {specs.map(([term, detail]) => (
             <div
               key={term}
-              className="grid grid-cols-[0.85fr_1.15fr] gap-4 border-b border-line px-5 py-4 last:border-b-0"
+              className="grid grid-cols-[0.85fr_1.15fr] gap-4 border-b border-line px-4 py-3 last:border-b-0 md:px-5 md:py-4"
             >
               <dt className="text-sm tracking-[0.12em] text-bone-muted">
                 {term}

@@ -22,8 +22,11 @@ const beats = [
 
 export function System() {
   return (
-    <section id="system" className="relative z-10 px-5 py-24 md:px-8 md:py-32">
-      <div className="mx-auto max-w-7xl">
+    <section
+      id="system"
+      className="section-panel relative z-10 px-5 py-14 md:px-8 md:py-16"
+    >
+      <div className="mx-auto flex h-full max-w-7xl flex-col justify-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -34,19 +37,19 @@ export function System() {
           <p className="text-xs font-semibold tracking-[0.24em] text-copper">
             THE METHOD
           </p>
-          <h2 className="display mt-4 text-4xl text-bone md:text-6xl">
+          <h2 className="display mt-3 text-3xl text-bone md:mt-4 md:text-5xl">
             Three rules.
             <br />
             No magic black box.
           </h2>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-bone-muted">
+          <p className="mt-4 max-w-xl text-sm leading-relaxed text-bone-muted md:mt-5 md:text-base">
             AURALIS follows a fixed pipeline: sense the acoustic boundary
             conditions, form beams with phase control, then apply spatial
             filters that match how hearing works — not louder EQ presets.
           </p>
         </motion.div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-8 grid gap-4 md:mt-10 md:grid-cols-3 md:gap-6">
           {beats.map((beat, i) => (
             <motion.article
               key={beat.index}
@@ -58,13 +61,15 @@ export function System() {
                 ease: [0.23, 1, 0.32, 1],
                 delay: i * 0.08,
               }}
-              className="rounded-3xl border border-line bg-ink-elevated/70 p-7 backdrop-blur-xl"
+              className="rounded-3xl border border-line bg-ink-elevated/70 p-5 backdrop-blur-xl md:p-7"
             >
               <p className="display text-sm tracking-[0.2em] text-copper">
                 {beat.index}
               </p>
-              <h3 className="display mt-5 text-2xl text-bone">{beat.title}</h3>
-              <p className="mt-4 text-sm leading-relaxed text-bone-muted">
+              <h3 className="display mt-3 text-xl text-bone md:mt-5 md:text-2xl">
+                {beat.title}
+              </h3>
+              <p className="mt-3 line-clamp-4 text-sm leading-relaxed text-bone-muted md:mt-4 md:line-clamp-none">
                 {beat.copy}
               </p>
             </motion.article>

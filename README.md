@@ -11,7 +11,7 @@ Cinematic **3D product launch landing** for a fictional spatial audio node. Buil
 - Next.js (App Router) + TypeScript + Tailwind CSS v4
 - React Three Fiber + Drei (procedural product model)
 - Motion (`motion/react`) for UI entrances
-- Lenis for smooth scrolling
+- Lenis for slow smooth scrolling + threshold section snap (~93%)
 
 ## Design read
 Premium hardware launch for portfolio reviewers: deep ink atmosphere, warm copper accent, Syne + Manrope, brand-first hero, no card clutter in the first viewport.

@@ -4,13 +4,16 @@ import { motion } from "motion/react";
 
 export function Order() {
   return (
-    <section id="order" className="relative z-10 px-5 py-28 md:px-8 md:py-36">
+    <section
+      id="order"
+      className="section-panel relative z-10 flex items-center px-5 py-14 md:px-8 md:py-16"
+    >
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.35 }}
         transition={{ duration: 0.85, ease: [0.23, 1, 0.32, 1] }}
-        className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-10 rounded-[2rem] border border-line bg-gradient-to-br from-ink-elevated via-ink to-[#1a1410] p-8 md:flex-row md:items-end md:p-12"
+        className="mx-auto flex w-full max-w-7xl flex-col items-start justify-between gap-8 rounded-[2rem] border border-line bg-gradient-to-br from-ink-elevated via-ink to-[#1a1410] p-7 md:flex-row md:items-end md:gap-10 md:p-12"
       >
         <div className="max-w-xl">
           <p className="text-xs font-semibold tracking-[0.24em] text-copper">

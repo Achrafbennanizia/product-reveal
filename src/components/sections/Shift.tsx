@@ -4,25 +4,28 @@ import { motion } from "motion/react";
 
 export function Shift() {
   return (
-    <section id="shift" className="relative z-10 px-5 py-28 md:px-8 md:py-36">
-      <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[1.1fr_0.9fr] md:items-center">
+    <section
+      id="shift"
+      className="section-panel relative z-10 px-5 py-16 md:px-8 md:py-20"
+    >
+      <div className="mx-auto grid h-full max-w-7xl content-center gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-center md:gap-12">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.35 }}
           transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
-          className="max-w-xl rounded-3xl border border-line bg-ink/55 p-8 backdrop-blur-xl md:p-10"
+          className="max-w-xl rounded-3xl border border-line bg-ink/55 p-6 backdrop-blur-xl md:p-9"
         >
           <p className="text-xs font-semibold tracking-[0.24em] text-copper">
             THE PROBLEM
           </p>
-          <h2 className="display mt-4 text-4xl text-bone md:text-5xl">
+          <h2 className="display mt-3 text-3xl text-bone md:mt-4 md:text-5xl">
             Stereo only controls left and right.
             <span className="block text-bone-muted">
               Your ears also need height and distance.
             </span>
           </h2>
-          <p className="mt-6 text-base leading-relaxed text-bone-muted">
+          <p className="mt-4 text-sm leading-relaxed text-bone-muted md:mt-6 md:text-base">
             Humans locate sound with interaural time and level differences
             (ITD / ILD), spectral pinna cues for elevation, and early
             reflections for distance. Two-channel stereo can fake width, but it
