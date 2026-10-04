@@ -7,9 +7,9 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="section-panel relative z-10 flex items-end px-5 pt-28 pb-16 snap-start md:items-center md:px-8 md:pb-24"
+      className="section-panel relative z-10 px-5 py-20 md:px-8 md:py-24"
     >
-      <div className="mx-auto grid w-full max-w-7xl gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] md:items-end">
+      <div className="mx-auto grid w-full max-w-7xl gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] md:items-center">
         <div className="max-w-xl">
           <motion.p
             initial={{ opacity: 0, y: 16 }}

@@ -6,9 +6,9 @@ export function Shift() {
   return (
     <section
       id="shift"
-      className="section-panel relative z-10 px-5 py-16 md:px-8 md:py-20"
+      className="section-panel relative z-10 px-5 py-12 md:px-8 md:py-16"
     >
-      <div className="mx-auto grid h-full max-w-7xl content-center gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-center md:gap-12">
+      <div className="mx-auto grid w-full max-w-7xl gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-center md:gap-12">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}

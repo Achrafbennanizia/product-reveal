@@ -6,7 +6,7 @@ export function Order() {
   return (
     <section
       id="order"
-      className="section-panel relative z-10 flex items-center px-5 py-14 md:px-8 md:py-16"
+      className="section-panel relative z-10 px-5 py-12 md:px-8 md:py-16"
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}

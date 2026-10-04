@@ -33,25 +33,33 @@ export function Proof() {
   return (
     <section
       id="proof"
-      className="section-panel relative z-10 px-5 py-14 md:px-8 md:py-16"
+      className="section-panel relative z-10 px-5 py-10 md:px-8 md:py-14"
     >
-      <div className="mx-auto flex h-full max-w-7xl flex-col justify-center">
+      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-3 md:grid-cols-[minmax(0,1fr)_clamp(11rem,24vw,20rem)_minmax(0,1fr)] md:gap-x-6 md:gap-y-2.5">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1] }}
+          className="md:col-start-1 md:row-start-1 md:mb-1"
         >
           <p className="text-xs font-semibold tracking-[0.24em] text-copper">
             LAB RESULTS
           </p>
-          <h2 className="display mt-3 max-w-2xl text-3xl text-bone md:mt-4 md:text-5xl">
+          <h2 className="display mt-2 text-3xl text-bone md:text-[2.15rem] md:leading-[0.95] xl:text-5xl">
             What we measure before we claim it.
           </h2>
         </motion.div>
 
-        <div className="mt-6 grid gap-4 md:mt-8 md:grid-cols-2 md:gap-5">
-          {findings.map((item, i) => (
+        {findings.map((item, i) => {
+          const place = [
+            "md:col-start-1 md:row-start-2",
+            "md:col-start-3 md:row-start-2",
+            "md:col-start-1 md:row-start-3",
+            "md:col-start-3 md:row-start-3",
+          ][i];
+
+          return (
             <motion.article
               key={item.title}
               initial={{ opacity: 0, y: 30 }}
@@ -62,20 +70,20 @@ export function Proof() {
                 ease: [0.23, 1, 0.32, 1],
                 delay: i * 0.06,
               }}
-              className="rounded-3xl border border-line bg-ink-elevated/60 p-5 backdrop-blur-xl md:p-7"
+              className={`flex h-full flex-col rounded-3xl border border-line bg-ink-elevated/85 p-4 backdrop-blur-xl md:p-5 ${place}`}
             >
               <p className="text-xs tracking-[0.18em] text-bone-muted">
                 {item.title}
               </p>
-              <p className="display mt-2 text-3xl text-copper md:mt-3 md:text-4xl">
+              <p className="display mt-2 text-3xl text-copper md:text-4xl">
                 {item.metric}
               </p>
-              <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-bone-muted md:mt-4 md:line-clamp-none">
+              <p className="mt-2 text-sm leading-snug text-bone-muted md:mt-3">
                 {item.detail}
               </p>
             </motion.article>
-          ))}
-        </div>
+          );
+        })}
       </div>
     </section>
   );

@@ -15,19 +15,20 @@ export function Materials() {
   return (
     <section
       id="materials"
-      className="section-panel relative z-10 px-5 py-14 md:px-8 md:py-16"
+      className="section-panel relative z-10 px-5 py-12 md:px-8 md:py-16"
     >
-      <div className="mx-auto grid h-full max-w-7xl content-center gap-8 md:grid-cols-2 md:items-center md:gap-12">
+      <div className="mx-auto grid w-full max-w-7xl items-center gap-8 md:grid-cols-[minmax(0,1fr)_clamp(11rem,24vw,20rem)_minmax(0,1.08fr)] md:gap-x-8">
         <motion.div
           initial={{ opacity: 0, y: 36 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.35 }}
           transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
+          className="md:col-start-1"
         >
           <p className="text-xs font-semibold tracking-[0.24em] text-copper">
             SPECIFICATIONS
           </p>
-          <h2 className="display mt-3 max-w-lg text-3xl text-bone md:mt-4 md:text-5xl">
+          <h2 className="display mt-3 text-3xl text-bone md:mt-4 md:text-[2.75rem] lg:text-5xl">
             Numbers you can check, not adjectives.
           </h2>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-bone-muted md:mt-6 md:text-base">
@@ -42,17 +43,17 @@ export function Materials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.35 }}
           transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1], delay: 0.08 }}
-          className="rounded-3xl border border-line bg-ink/60 p-2 backdrop-blur-xl"
+          className="rounded-3xl border border-line bg-ink/80 p-2 backdrop-blur-xl md:col-start-3"
         >
           {specs.map(([term, detail]) => (
             <div
               key={term}
-              className="grid grid-cols-[0.85fr_1.15fr] gap-4 border-b border-line px-4 py-3 last:border-b-0 md:px-5 md:py-4"
+              className="grid grid-cols-[auto_minmax(0,1fr)] items-baseline gap-x-5 border-b border-line px-4 py-3 last:border-b-0 md:px-5 md:py-3.5"
             >
-              <dt className="text-sm tracking-[0.12em] text-bone-muted">
+              <dt className="text-xs tracking-[0.14em] whitespace-nowrap text-bone-muted md:text-sm">
                 {term}
               </dt>
-              <dd className="text-sm text-bone">{detail}</dd>
+              <dd className="text-sm leading-snug text-bone">{detail}</dd>
             </div>
           ))}
         </motion.dl>
