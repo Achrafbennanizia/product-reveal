@@ -20,7 +20,7 @@ export default function Home() {
         <ProductCanvas />
         <Nav />
         <ScrollAssist />
-        <main className="relative">
+        <main id="main" tabIndex={-1} className="relative">
           <Hero />
           <Shift />
           <System />

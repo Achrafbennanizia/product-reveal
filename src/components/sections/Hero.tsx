@@ -26,7 +26,7 @@ export function Hero() {
             transition={{ duration: 0.9, ease: [0.23, 1, 0.32, 1], delay: 0.28 }}
             className="display text-[clamp(3.4rem,9vw,7.5rem)] text-bone"
           >
-            AURALIS
+            <span translate="no">AURALIS</span>
           </motion.h1>
 
           <motion.p
@@ -49,6 +49,7 @@ export function Hero() {
             <a
               href="#order"
               onClick={(e) => {
+                if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
                 e.preventDefault();
                 smoothScrollToId("order", 2.15);
               }}
@@ -59,6 +60,7 @@ export function Hero() {
             <a
               href="#shift"
               onClick={(e) => {
+                if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
                 e.preventDefault();
                 smoothScrollToId("shift", 2.15);
               }}

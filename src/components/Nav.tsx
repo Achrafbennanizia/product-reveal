@@ -12,6 +12,7 @@ const LINKS = [
 
 function go(id: string) {
   return (e: React.MouseEvent) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
     e.preventDefault();
     smoothScrollToId(id, 1.45);
   };
@@ -47,7 +48,7 @@ export function Nav() {
             textShadow: "0 2px 16px rgba(0,0,0,0.95)",
           }}
         >
-          FIELD / AURALIS
+          <span translate="no">FIELD / AURALIS</span>
         </a>
         <nav className="hidden items-center gap-8 text-sm md:flex">
           {LINKS.map((link) => (
